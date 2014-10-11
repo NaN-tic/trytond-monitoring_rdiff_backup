@@ -1,14 +1,13 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
+import subprocess
 from trytond.pool import PoolMeta
-import psutil
 
 __all__ = ['CheckPlan']
 __metaclass__ = PoolMeta
 
 
 def check_output(*args):
-    import subprocess
     process = subprocess.Popen(args, stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
     process.wait()
