@@ -20,7 +20,7 @@ class CheckPlan:
     __name__ = 'monitoring.check.plan'
 
     def check_backup(self):
-        path = self.item.get_attribute('backup_paths')
+        path = self.asset.get_attribute('backup_paths')
         output = check_output('rdiff-backup', '--list-increment-size', path)
         lines = [x for x in output.splitlines() if '(current mirror)' in x]
         if not lines:
