@@ -10,7 +10,7 @@ class TestCase(unittest.TestCase):
 
     def setUp(self):
         trytond.tests.test_tryton.install_module(
-            'network_monitoring_rdiff_backup')
+            'monitoring_rdiff_backup')
 
     def test0006depends(self):
         'Test depends'
