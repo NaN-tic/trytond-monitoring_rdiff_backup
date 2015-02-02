@@ -1,0 +1,31 @@
+<tryton>
+    <data>
+        <record model="monitoring.check.type" id="check_rdiff_backup">
+            <field name="name">rdiff-backup</field>
+            <field name="internal_name">check_rdiff_backup</field>
+        </record>
+        <record model="monitoring.result.type" id="result_rdiff_backup_status">
+            <field name="name">rdiff-backup Status</field>
+            <field name="internal_name">rdiff_backup_status</field>
+            <field name="type">char</field>
+        </record>
+        <record model="monitoring.result.type" id="result_rdiff_backup_size">
+            <field name="name">rdiff-backup Size</field>
+            <field name="internal_name">rdiff_backup_size</field>
+            <field name="type">float</field>
+            <field name="uom" ref="monitoring.uom_byte"/>
+        </record>
+        <record model="monitoring.result.type" id="result_rdiff_backup_cumulative_size">
+            <field name="name">rdiff-backup Cumulative Size</field>
+            <field name="internal_name">rdiff_backup_cumulative_size</field>
+            <field name="type">float</field>
+            <field name="uom" ref="monitoring.uom_byte"/>
+        </record>
+        <record model="monitoring.result.type" id="result_rdiff_backup_age">
+            <field name="name">rdiff-backup Age</field>
+            <field name="internal_name">rdiff_backup_age</field>
+            <field name="type">float</field>
+            <field name="uom" ref="product.uom_hour"/>
+        </record>
+    </data>
+</tryton>
